@@ -27,7 +27,7 @@
   <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" sizes="any">
   <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
 </head>
-<body class="{{ endpoint }}_endpoint" >
+<body class="{{ endpoint }}_endpoint" style="font-family: phyrexian;">
   <main id="main_{{  self._TemplateReference__context.name|replace("simple/", "")|replace(".html", "") }}" class="{{body_class}}">
     {% if errors %}
         <div class="dialog-error" role="alert">
