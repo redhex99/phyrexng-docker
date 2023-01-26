@@ -2,10 +2,16 @@
 use_default_settings: true
 server:
   # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
-  secret_key: "ultrasecretkey"  # change this!
+  secret_key: "dfc3d9aceb89aaa3bb9c2cdd19f9fdfaf6afc794e80f3059c9b60618bdea5aeb"  # change this!
   limiter: true  # can be disabled for a private instance
   image_proxy: true
+  method: "GET"
 ui:
   static_use_hash: true
 redis:
   url: redis://redis:6379/0
+general:
+  instance_name: "PhyreXNG" # displayed name
+  enable_metrics: true      # record stats
+search:
+  autocomplete: "duckduckgo"
