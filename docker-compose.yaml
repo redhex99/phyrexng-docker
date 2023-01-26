@@ -45,7 +45,10 @@ services:
       - ./static/themes/simple/img/searxng.png:/usr/local/searxng/searx/static/themes/simple/img/searxng.png
       - ./static/themes/simple/img/favicon.png:/usr/local/searxng/searx/static/themes/simple/img/favicon.png
       - ./static/themes/simple/img/favicon.svg:/usr/local/searxng/searx/static/themes/simple/img/favicon.svg
-      - ./searxng.min.css:/usr/local/searxng/searx/static/themes/simple/css/searxng.min.css
+      #- ./searxng.min.css:/usr/local/searxng/searx/static/themes/simple/css/searxng.min.css
+      - type: bind
+        source: ./searxng.min.css
+        target: /usr/local/searxng/searx/static/themes/simple/css/searxng.min.css
       
       
     environment:
