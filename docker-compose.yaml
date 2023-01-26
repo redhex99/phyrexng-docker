@@ -46,6 +46,9 @@ services:
       - ./static/themes/simple/img/favicon.png:/usr/local/searxng/searx/static/themes/simple/img/favicon.png
       - ./static/themes/simple/img/favicon.svg:/usr/local/searxng/searx/static/themes/simple/img/favicon.svg
       - ./searxng.min.css:/usr/local/searxng/searx/static/themes/simple/css/searxng.min.css
+      - ./searxng.min.css.map:/usr/local/searxng/searx/static/themes/simple/css/searxng.min.css.map
+      - ./searxng-rtl.min.css:/usr/local/searxng/searx/static/themes/simple/css/searxng-rtl.min.css
+      - ./searxng-rtl.min.css.map:/usr/local/searxng/searx/static/themes/simple/css/searxng-rtl.min.css.map
     environment:
       - SEARXNG_BASE_URL=https://${SEARXNG_HOSTNAME:-localhost}/
     cap_drop:
